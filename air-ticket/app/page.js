@@ -1,10 +1,15 @@
-import Image from "next/image";
+import Image from '../images/plane.jpg';
 
 export default function Home() {
+  console.log('====================================');
+  console.log(Image);
+  console.log('====================================');
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     
-
+    <main className="container bg-transparent">
+    <div className='w-full h-[85vh] bg-cover '  style={{backgroundImage : `url(${Image.src})`} }>
+    </div>
+      
+    
     </main>
   );
 }
