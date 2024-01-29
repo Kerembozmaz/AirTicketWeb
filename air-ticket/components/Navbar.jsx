@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { FaCircleQuestion } from "react-icons/fa6";
+import { FiMenu } from "react-icons/fi";
 export default function Navbar() {
   const [openBurger, setOpenBurger] = useState(false);
-  console.log(openBurger);
+ 
   return (
-    <>
+    <div className='flex items-center'>
       <div className={` gap-10   md:flex md:flex-row md:relative md:translate-x-0 ${openBurger ? "flex flex-col absolute bg-white top-0 left-0 translate-x-[50%] " : "hidden"}`}>
         <div className="flex items-center gap-2">
           <FaCircleQuestion />
@@ -20,11 +21,11 @@ export default function Navbar() {
         </button>
       </div>
       <div
-        className="block md:hidden text-black cursor-pointer"
+        className="flex md:hidden  content-center text-black cursor-pointer"
         onClick={()=>setOpenBurger(!openBurger)}
       >
-        amburger
+        <FiMenu/>
       </div>
-    </>
+    </div>
   );
 }
